@@ -8,6 +8,7 @@ const app = express();
 const Port = process.env.PORT || 8080;
 const shopRoutes =require('./routes/indexRouter');
 const productRoutes =require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoute')
 
 
 app.use(express.json())
@@ -16,6 +17,7 @@ app.use(cors({exposedHeader: 'x-auth-token'}))
 
 app.use('/', shopRoutes)
 app.use('/', productRoutes)
+app.use('/', userRoutes)
 
 
 
