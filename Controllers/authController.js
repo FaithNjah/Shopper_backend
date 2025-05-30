@@ -96,7 +96,7 @@ async function loginUser(req, res) {
 // logout
 async function logout(req, res) {
     try {
-        res.clearCookie('token'); // Optional if you're setting token in cookies
+        res.clearCookie('token'); 
         res.status(200).json({ message: "Logged out successfully" });
     } catch (err) {
         console.error("Logout error:", err);
