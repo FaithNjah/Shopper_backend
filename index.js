@@ -8,8 +8,9 @@ const app = express();
 const Port = process.env.PORT || 8080;
 const shopRoutes =require('./routes/indexRouter');
 const productRoutes =require('./routes/productRoutes');
-const userRoutes = require('./routes/userRoute')
-const cartRoutes = require('./routes/cart')
+const userRoutes = require('./routes/userRoute');
+const cartRoutes = require('./routes/cart');
+
 
 
 app.use(express.json())
@@ -20,6 +21,7 @@ app.use('/', shopRoutes)
 app.use('/', productRoutes)
 app.use('/', userRoutes)
 app.use('/', cartRoutes); 
+
 
 
 
