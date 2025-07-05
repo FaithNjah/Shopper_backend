@@ -30,29 +30,4 @@ router.get('/shop', async (req, res) => {
     }
 });
 
-
-// Add to cart
-// router.post('/add-to-cart/:productId', isLoggedIn, async (req, res) => {
-//   try {
-//     const productId = req.params.productId;
-//     const userId = req.user._id; // Make sure req.user is populated via middleware
-
-//     // Update user's cart
-//     const updatedUser = await userModel.findByIdAndUpdate(
-//       userId,
-//       { $push: { cart: productId } },
-//       { new: true }
-//     ).populate('cart'); // Optional: populate for easier frontend testing
-
-//     res.status(200).json({
-//       message: 'Product added to cart',
-//       cart: updatedUser.cart, // optional: send cart contents
-//     });
-//   } catch (error) {
-//     console.error('Add to cart error:', error);
-//     res.status(500).json({ error: 'Failed to add product to cart' });
-//   }
-// });
-
-
 module.exports = router;
